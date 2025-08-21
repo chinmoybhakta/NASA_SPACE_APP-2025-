@@ -1,12 +1,13 @@
 
 import 'package:go_router/go_router.dart';
 import 'package:nasa_vegetation/src/core/routes/route_constant.dart';
+import 'package:nasa_vegetation/src/feature/screens/map_screen/presentation/map_screen.dart';
 import '../../feature/screens/home_screen/presentation/home_screen.dart';
 import 'build_page_with_transition.dart';
 
 class RouteConfig {
   GoRouter goRouter = GoRouter(
-    initialLocation: RouteConst.homeScreen,
+    initialLocation: RouteConst.mapScreen,
 
     /// Start at the splash screen
     routes: [
@@ -62,18 +63,17 @@ class RouteConfig {
         },
       ),
 
-  //     GoRoute(
-  //       path: RouteConst.passwordResetScreen,
-  //       pageBuilder: (context, state) {
-  //         final otpParameterModel = state.extra as OtpParameterModel;
-  //         return buildPageWithTransition(
-  //           context: context,
-  //           state: state,
-  //           transitionType: PageTransitionType.slideRightToLeft,
-  //           child: PasswordResetScreen(otpParameterModel: otpParameterModel),
-  //         );
-  //       },
-  //     ),
+      GoRoute(
+        path: RouteConst.mapScreen,
+        pageBuilder: (context, state) {
+          return buildPageWithTransition(
+            context: context,
+            state: state,
+            transitionType: PageTransitionType.slideRightToLeft,
+            child: VegetationMapPage(),
+          );
+        },
+      ),
 
     ],
   );
