@@ -12,11 +12,11 @@ class AppInputDecorationTheme {
     hintStyle: GoogleFonts.inter(
       fontSize: 14.sp,
       fontWeight: FontWeight.w400,
-      color: AppColor.secondaryTextColor,
+      color: AppColor.primaryTextColor,
     ),
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(4.r),
-      borderSide: BorderSide(color: AppColor.borderColor, width: 1.w),
+      borderSide: BorderSide(color: AppColor.primaryColor, width: 1.w),
     ),
     focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(4.r),
@@ -28,7 +28,7 @@ class AppInputDecorationTheme {
     ),
     disabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(4.r),
-      borderSide: BorderSide(color: AppColor.borderColor, width: 1.w),
+      borderSide: BorderSide(color: AppColor.primaryColor, width: 1.w),
     ),
   );
 

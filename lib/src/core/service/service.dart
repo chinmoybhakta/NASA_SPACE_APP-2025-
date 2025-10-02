@@ -1,18 +1,14 @@
-import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'dart:convert';
 
-class NasaApiService {
-  final String baseUrl = "https://images-api.nasa.gov/search";
-
-  Future<List<dynamic>> searchImages(String query) async {
-    final response = await http.get(Uri.parse("$baseUrl?q=$query"));
-
-    if (response.statusCode == 200) {
-      final data = jsonDecode(response.body);
-      // NASA returns { collection: { items: [...] } }
-      return data['collection']['items'];
-    } else {
-      throw Exception("Failed to fetch images");
-    }
+Future<List<Map<String, dynamic>>> fetchEonetEvents() async {
+  final url = 'https://eonet.gsfc.nasa.gov/api/v3/events/geojson?status=open&limit=1';
+  final response = await http.get(Uri.parse(url));
+  if (response.statusCode == 200) {
+    final data = json.decode(response.body);
+    // Each feature is an event
+    return List<Map<String, dynamic>>.from(data['features']);
+  } else {
+    throw Exception('Failed to load EONET events');
   }
 }

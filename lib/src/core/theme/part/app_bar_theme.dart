@@ -11,7 +11,7 @@ class CustomAppBarTheme {
     backgroundColor: Colors.transparent,
     surfaceTintColor: Colors.transparent,
     titleTextStyle: GoogleFonts.inter(
-      color: AppColor.textColor,
+      color: AppColor.primaryTextColor,
       fontSize: 18.sp,
       fontWeight: FontWeight.w600,
     ),

@@ -2,5 +2,5 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppPadding{
-  static final EdgeInsets horizontalPadding = EdgeInsets.symmetric(horizontal: 16.w);
+  static final EdgeInsets horizontalPadding = EdgeInsets.symmetric(horizontal: 20.w);
 }

@@ -1,4 +1,5 @@
 
+
 import 'package:dynamic_path_url_strategy/dynamic_path_url_strategy.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -27,8 +28,8 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  static const double deviceWidth = 390.0;
-  static const double deviceHeight = 840.0;
+  static const double deviceWidth = 412.0;
+  static const double deviceHeight = 917.0;
 
   @override
   Widget build(BuildContext context) {
